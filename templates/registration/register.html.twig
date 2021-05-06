@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Registracija{% endblock %}
+
+{% block body %}
+    <div class="container">
+        {% for flashError in app.flashes('verify_email_error') %}
+            <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+        {% endfor %}
+        <div class="row justify-content-center">
+            <h1 class="text-center p-3">
+                <b>
+                    <span class="bg-light p-1" style="color: darkcyan">Registracija</span>
+                </b>
+            </h1>
+        </div>
+        {{ form_start(registrationForm) }}
+            {{ form_row(registrationForm.first_name) }}
+            {{ form_row(registrationForm.last_name) }}
+            {{ form_row(registrationForm.email) }}
+            {{ form_row(registrationForm.plainPassword, {
+                label: 'Lozinka'
+            }) }}
+            <button type="submit" class="btn btn-primary">Registriraj me</button>
+        {{ form_end(registrationForm) }}
+    </div>
+{% endblock %}

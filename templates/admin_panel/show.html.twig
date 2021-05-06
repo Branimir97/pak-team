@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Informacije o vozilu{% endblock %}
+
+{% block body %}
+
+
+    <h1 class="p-3 text-center">
+        <b>
+            <span class="bg-light p-1" style="font-family: 'Big Shoulders Stencil Display', cursive;">Informacije o vozilu</span>
+        </b>
+    </h1>
+    <p class="text-center"><span class="bg-light p-1" style="color: darkcyan">Vozilo: <b>{{ vehicle.mark }} {{ vehicle.model }}</b></span></p>
+    <div class="container">
+        <a class="p-3" href="{{ path('vehicle_index') }}"><i class="fas fa-arrow-circle-left"></i> Nazad na listu vozila</a>
+
+        <table class="table mt-3">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ vehicle.id }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>
+                    {% if vehicle.status == "Dostupno" %}
+                        <span style="color: darkgoldenrod"><b>{{ vehicle.status }} <i class="fas fa-check"></i></b></span>
+                    {% elseif vehicle.status == "U dolasku" %}
+                        <span style="color: dodgerblue"><b>{{ vehicle.status }} <i class="fas fa-route"></i></b></span>
+                    {% elseif vehicle.status == "Rezervirano" %}
+                        <span style="color: red"><b>{{ vehicle.status }} <i class="fas fa-hourglass-half"></i></b></span>
+                    {% elseif vehicle.status == "Prodano" %}
+                        <span style="color: green"><b>{{ vehicle.status }} <i class="fas fa-hand-holding-usd"></i></b></span>
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th>Tip</th>
+                <td>{{ vehicle.type }}</td>
+            </tr>
+            <tr>
+                <th>Marka</th>
+                <td>{{ vehicle.mark }}</td>
+            </tr>
+            <tr>
+                <th>Model</th>
+                <td>{{ vehicle.model }}</td>
+            </tr>
+            <tr>
+                <th>Godina proizvodnje</th>
+                <td>{{ vehicle.manufactureYear|date('Y') }}.</td>
+            </tr>
+            <tr>
+                <th>Godina modela</th>
+                <td>{{ vehicle.modelYear|date('Y') }}.</td>
+            </tr>
+            <tr>
+                <th>Prijeđeni kilometri</th>
+                <td>{{ vehicle.kilometers|number_format('0', '.', '.') }}</td>
+            </tr>
+            <tr>
+                <th>Snaga</th>
+                <td>{{ vehicle.power }} [kW]</td>
+            </tr>
+            <tr>
+                <th>Mjenjač</th>
+                <td>{{ vehicle.gearbox }}</td>
+            </tr>
+            <tr>
+                <th>Broj brzina</th>
+                <td>{{ vehicle.gears }}</td>
+            </tr>
+            <tr>
+                <th>Potrošnja</th>
+                <td>{{ vehicle.consumption }} L/100km</td>
+            </tr>
+            <tr>
+                <th>Cijena</th>
+                <td>{{ vehicle.price|number_format('0', '.', '.') }} €</td>
+            </tr>
+        </tbody>
+    </table>
+        <a class="btn btn-success" href="{{ path('vehicle_edit', {'id': vehicle.id}) }}">Uredi vozilo</a>
+
+        {{ include('admin_panel/_delete_form.html.twig') }}
+    </div>
+
+
+
+{% endblock %}

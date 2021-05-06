@@ -1,0 +1,156 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin panel{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="dropdown mt-2">
+            <button class="btn btn-secondary dropdown-toggle" type="button"
+                    id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                Filtriraj vozila
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a id="Sva vozila" class="dropdown-item" href="javascript:void(0)">Sva vozila na lageru</a>
+                <a id="Dostupno" class="dropdown-item" href="javascript:void(0)">Dostupna vozila</a>
+                <a id="Prodano" class="dropdown-item" href="javascript:void(0)">Prodana vozila</a>
+                <a id="Rezervirano" class="dropdown-item" href="javascript:void(0)">Rezervirana vozila</a>
+                <a id="U dolasku" class="dropdown-item" href="javascript:void(0)">Vozila u dolasku</a>
+            </div>
+        </div>
+        <div class="mt-2 text-center bg-danger text-white error"></div>
+        <table class="table text-center mt-2">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Status</th>
+                    <th>Marka</th>
+                    <th>Model</th>
+                    <th>Mjenjač</th>
+                    <th>Cijena [€]</th>
+                    <th>Mogućnosti</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for vehicle in vehicles %}
+                <tr>
+                    <td>{{ vehicle.id }}</td>
+                    <td>
+                        {% if vehicle.status == "Dostupno" %}
+                            <span style="color: darkgoldenrod"><b>{{ vehicle.status }} <i class="fas fa-check"></i></b></span>
+                        {% elseif vehicle.status == "U dolasku" %}
+                            <span style="color: dodgerblue"><b>{{ vehicle.status }} <i class="fas fa-route"></i></b></span>
+                        {% elseif vehicle.status == "Rezervirano" %}
+                            <span style="color: red"><b>{{ vehicle.status }} <i class="fas fa-hourglass-half"></i></b></span>
+                        {% elseif vehicle.status == "Prodano" %}
+                            <span style="color: green"><b>{{ vehicle.status }} <i class="fas fa-hand-holding-usd"></i></b></span>
+                        {% endif %}
+                    </td>
+                    <td>{{ vehicle.mark }}</td>
+                    <td>{{ vehicle.model }}</td>
+                    <td>{{ vehicle.gearbox }}</td>
+                    <td>{{ vehicle.price|number_format('0', '.', '.') }}</td>
+                    <td>
+                        <a class="btn btn-primary" href="{{ path('vehicle_change_visibility', {'id': vehicle.id}) }}" title="Promijeni vidljivost">
+                            {% if vehicle.visibility %}<i class="far fa-eye"></i>
+                            {% else %}
+                                <i class="far fa-eye-slash"></i>
+                            {% endif %}
+                        </a>
+                        <a class="btn btn-success" href="{{ path('vehicle_show', {'id': vehicle.id}) }}"
+                           title="Prikaži detalje">
+                            <i class="fas fa-info-circle"></i>
+                        </a>
+                        <a class="btn btn-warning" href="{{ path('vehicle_edit', {'id': vehicle.id}) }}"
+                           title="Uredi vozilo">
+                            <i class="far fa-edit"></i>
+                        </a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="14">Trenutno ne postoji niti jedno vozilo u bazi podataka.</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        $(document).on('click', '.dropdown-menu a', function () {
+            $('table tbody').empty();
+            $('div.error').empty();
+            $(".dropdown-menu a i").remove()
+            $(this).append(" <i style='color:green' class='fas fa-check'></i>")
+            let selected = ($(this).attr('id'));
+            $.ajax({
+            url: {{ path('vehicle_index') }},
+                type: "POST",
+                dataType: "json",
+                data: {
+                    'filterBy':selected
+                },
+                success: function (data) {
+                    var appendString = '';
+                    if(data === undefined || data.length === 0) {
+                        $('div.error').append(
+                            "<h6 class='p-2'>" +
+                            "Trenutno ne postoji niti jedno vozilo za odabrani filtar." +
+                            "</h6>"
+                        )
+                    }
+                    $.each(data, function (k, v){
+                        appendString += "<tr>" +
+                            "<td>"+v.id+"</td>" +
+                            "<td>";
+                            if (v.status === "Dostupno") {
+                                appendString+=
+                                "<span style='color: darkgoldenrod'><b>"+v.status+" <i class='fas fa-check'></i></b></span>";
+                            } else if(v.status === "U dolasku") {
+                                appendString+=
+                                    "<span style='color: dodgerblue'><b>"+v.status+" <i class='fas fa-route'></i></b></span>";
+                            } else if(v.status === "Rezervirano") {
+                                appendString+=
+                                    "<span style='color: red'><b>"+v.status+" <i class='fas fa-hourglass-half'></i></b></span>";
+                            } else if(v.status === "Prodano") {
+                                appendString+=
+                                    "<span style='color: green'><b>"+v.status+" <i class='fas fa-hand-holding-usd'></i></b></span>";
+                            }
+                            appendString+="</td>" +
+                            "<td>"+v.mark+"</td>" +
+                            "<td>"+v.model+"</td>" +
+                            "<td>"+v.gearbox+"</td>" +
+                            "<td>"+v.price+"</td>" +
+                            "<td>" +
+                            "<a class='btn btn-primary' " +
+                            "href='{{ path('vehicle_change_visibility', {"id": '{{ v.id }}'}) }}' title='Promijeni vidljivost'>";
+                            if(v.visibility) {
+                                appendString+= "<i class='far fa-eye'></i>";
+                            } else {
+                                appendString+= "<i class='far fa-eye-slash'></i>";
+                            }
+                            appendString+=
+                            "</a> " +
+                            "<a class='btn btn-success' " +
+                                "href='{{ path("vehicle_show", {"id": '{{ v.id }}'}) }}'title='Prikaži detalje'>"+
+                                    "<i class='fas fa-info-circle'></i>"+
+                            "</a> " +
+                            "<a class='btn btn-warning' " +
+                            "href='{{ path("vehicle_edit", {"id": '{{ v.id }}'}) }}'title='Uredi vozilo'>"+
+                            "<i class='far fa-edit'></i>"+
+                            "</a>" +
+                            "</td>" +
+                            "</tr>"
+                    })
+                    $("table tbody").append(appendString);
+                }
+            })
+        })
+        $(document).ready(function () {
+            $(".dropdown-menu a:first").append(" <i style='color:green' class='fas fa-check'></i>")
+            // $("#vehicles").addClass('active');
+        })
+    </script>
+{% endblock %}

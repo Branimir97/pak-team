@@ -1,0 +1,15 @@
+.used-vehicles-wrapper{
+    height: 250px;
+    opacity: 0.9;
+    background-image: url('../images/cover_rabljena2.jpg');
+    background-size: cover;
+    background-position: 25% 46%;
+
+}
+
+.incoming-vehicles-wrapper{
+    height: 200px;
+    background-image: url(https://www.roca.hr/fdsak3jnFsk1Kfa/home/AC_Roca-vozila_u_dolasku_m-3.png);
+    opacity: 0.9;
+    background-position: 20% 75%;
+}

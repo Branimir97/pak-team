@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width initial-scale=1.0">
+        <title>
+            {% block title %}{% endblock %}
+        </title>
+        
+        <!-- Website Icon -->
+        <link rel="icon" href="{{ asset('images/pak-team-logo.jpg') }}" type="image/x-icon">
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="{{ asset("css/progress-bar.css") }}">
+        <link rel="stylesheet" href="{{ asset("css/navigation.css") }}">
+        <link rel="stylesheet" href="{{ asset("css/wrappers.css") }}">
+        <link rel="stylesheet" href="{{ asset("css/sidebar.css") }}">
+        <link rel="stylesheet" href="{{ asset("css/footer.css") }}">
+        {% block stylesheets %}{% endblock %}
+
+        <!-- FontAwesome -->
+        <script src="https://kit.fontawesome.com/f69451562f.js" crossorigin="anonymous"></script>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <!-- Scripts -->
+        <script src="{{ asset("js/scroll-indicator.js") }}" type="text/javascript"></script>
+        {% block javascripts %}{% endblock %}
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176679652-1"></script>
+        <script src="{{ asset("js/google-analytics.js") }}" type="text/javascript"></script>
+    </head>
+    <body>
+    <div class="progress-container fixed-top">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top p-1" id="main_navbar">
+        <a class="navbar-brand" href="{{ path('used_vehicles') }}">
+            <img class="rounded-circle logo" src="{{ asset('images/pak-team-logo.jpg') }}" alt="pak-team-logo">
+            <span class="ml-2">PAK TEAM</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ path('used_vehicles') }}">Rabljena vozila</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('incoming_vehicles') }}">Vozila u dolasku</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('ordering_vehicles') }}">Sustav narudžbe vozila</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('insurance_policies') }}">Police osiguranja</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('car_rental') }}">Najam vozila</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('about_us') }}">O nama</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Flash messages -->
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success text-center mb-0">
+            {{ message }}
+        </div>
+    {% endfor %}
+    {% for message in app.flashes('danger') %}
+        <div class="alert alert-danger text-center mb-0">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    {% if not is_granted("ROLE_ADMIN") %}
+        {% block body %}
+        {% endblock %}
+    {% else %}
+        <!-- Sidebar -->
+        <div class="d-flex toggled" id="wrapper">
+            <div class="bg-light border-right" id="sidebar-wrapper">
+                <div class="sidebar-heading">ADMIN PANEL</div>
+                <div class="list-group list-group-flush">
+                    <a href="{{ path('vehicle_index') }}"
+                       class="list-group-item list-group-item-action bg-light">
+                        Pregled vozila
+                        <i class="fab fa-sistrix"></i>
+                    </a>
+                    <a href="{{ path('vehicle_new') }}"
+                       class="list-group-item list-group-item-action bg-light">
+                        Dodaj novo
+                        <i class="fas fa-car-alt"></i>
+                    </a>
+                    <a href="{{ path('inquirie_list') }}"
+                       class="list-group-item list-group-item-action bg-light">
+                        Pregled upita
+                        <i class="far fa-file-alt"></i>
+                    </a>
+                    <a href="{{ path('insert_sold_vehicles') }}"
+                       class="list-group-item list-group-item-action bg-light">
+                        Dodavanje prodanih vozila
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </a>
+                </div>
+            </div>
+            <div id="page-content-wrapper">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <button class="btn btn-primary" id="menu-toggle">Admin panel - izbornik</button>
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-danger text-white"
+                               href="{{ path('app_logout') }}">
+                                Odjava
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                {{ block('body') }}
+            </div>
+        </div>
+    {% endif %}
+
+    <footer id="footer" class="footer-1 mt-3 text-center">
+        <div class="main-footer widgets-dark typo-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="widget subscribe no-box">
+                            <h5 class="widget-title">PAK TEAM d.o.o.</h5>
+                            <p>
+                                <i class="fas fa-car"></i>
+                                Tvrtka za uvoz, prodaju i najam motornih vozila.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="widget no-box">
+                            <h5 class="widget-title">Poveznice<span></span></h5>
+                            <ul class="thumbnail-widget">
+                                <li>
+                                    <div class="thumb-content">
+                                        <a href="{{ path('used_vehicles') }}">
+                                            Rabljena vozila
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="thumb-content">
+                                        <a href="{{ path('incoming_vehicles') }}">
+                                            Vozila u dolasku
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="thumb-content">
+                                        <a href="{{ path('ordering_vehicles') }}">
+                                            Sustav narudžbe vozila
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="thumb-content">
+                                        <a href="{{ path('insurance_policies') }}">
+                                            Police osiguranja
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="thumb-content">
+                                        <a href="{{ path('about_us') }}">
+                                            O nama
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="widget no-box">
+                            <h5 class="widget-title">Najam vozila<span></span></h5>
+                            <p>
+                                Najam osobnih vozila novih generacija već od 199,00 kn/dan.
+                            </p>
+                            <a class="btn btn-primary" href="{{ path('car_rental') }}">
+                                Saznaj više
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="widget no-box">
+                            <h5 class="widget-title">
+                                Kontakt
+                            </h5>
+                            <p>
+                                <a href="mailto:pakteamauto@gmail.com"
+                                  title="Email adresa">
+                                    <i class="far fa-envelope"></i>
+                                    pakteamauto@gmail.com
+                                </a>
+                            </p>
+                            <ul class="social-footer2">
+                                <li>
+                                    <a title="Njuškalo" target="_blank"
+                                       href="https://www.njuskalo.hr/trgovina/pakteamauto">
+                                        <img alt="youtube" width="30" height="30"
+                                             src="{{ asset('images/njuskalo.png') }}">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a title="Facebook" target="_blank"
+                                       href="https://www.facebook.com/pakteamauto">
+                                        <img alt="Facebook" width="30" height="30"
+                                             src="{{ asset('images/facebook.png') }}">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>PAK TEAM automobili d.o.o. © 2021.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </body>
+    <script src="{{ asset("js/sidebar.js") }}" type="text/javascript"></script>
+</html>
+
+

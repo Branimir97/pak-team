@@ -1,0 +1,57 @@
+.one_vehicle
+{
+    border: 1px solid gray;
+}
+
+.image-wrapper-main
+{
+    width: 100%;
+    height: 200px;
+}
+
+.image-wrapper-main img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title-block
+{
+    height: 80px;
+}
+
+/* Mobile M */
+@media screen and (min-width: 375px) {
+    .image-wrapper-main {
+        height: 250px;
+    }
+}
+
+/* Mobile L */
+@media screen and (min-width: 425px) {
+    .image-wrapper-main {
+        height: 275px;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+    .image-wrapper-main {
+        height: 150px;
+    }
+}
+
+/* Laptop */
+@media screen and (min-width: 1024px) {
+    .image-wrapper-main {
+        height: 225px;
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+    .image-wrapper-main {
+        height: 250px;
+    }
+}

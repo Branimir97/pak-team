@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Prodana vozila{% endblock %}
+{% block body %}
+    <div class="count text-center">
+        <p class="m-2">Ukupan broj prikazanih prodanih vozila: {{ vehicles.getTotalItemCount }}</p>
+    </div>
+    <div class="row mt-3 justify-content-center">
+        {% if vehicles.getTotalItemCount == 0 %}
+            <div class="col-sm-6">
+                <h6 class="text-center bg-secondary text-white p-3">Lista prodanih vozila se ažurira!</h6>
+            </div>
+        {% else %}
+            {% for vehicle in vehicles %}
+                <div class="col-sm-3 sold_vehicle-wrapper mb-3">
+                    <img src="{{ asset('uploads/')~vehicle.imagePath }}"
+                         alt="{{ vehicle.title }}"
+                        title="{{ vehicle.title }}">
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <div class="text-center">
+        {{ knp_pagination_render(vehicles) }}
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        $(document).ready(function () {
+            $('.carousel-item:first-child').addClass('active')
+            $('.carousel-indicators li:first-child').addClass('active')
+        })
+    </script>
+{% endblock %}
+
+

@@ -1,0 +1,15 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.progress-container{
+    width: 100%;
+    height: 3px;
+    background-color: gray;
+}
+
+.progress-bar{
+    height: 3px;
+    background-color: cyan;
+    width: 0%;
+}

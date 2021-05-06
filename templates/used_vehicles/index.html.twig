@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}PAK TEAM{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset("css/one_vehicle.css") }}">
+{% endblock %}
+
+{% block body %}
+    <div class="used-vehicles-wrapper"></div>
+    <div class="container-fluid">
+        <h1 class="text-center p-3">
+            Rabljena vozila u ponudi
+        </h1>
+
+      {% if vehicles.getTotalItemCount == 0 %}
+            <h6 class="text-center mt-3 p-3 bg-danger text-white">
+                Trenutno nemamo niti jedno vozilo u ponudi.
+            </h6>
+            <h6 class="text-center bg-light p-3">
+                Ukoliko ste zainteresirani za određeni model vozila, informacije o narudžbi saznajte na
+                <a href="{{ path('ordering_vehicles') }}">poveznici</a>.
+            </h6>
+        {% else %}
+            <div class="count text-center">
+                <p class="m-2">Ukupno vozila: {{ vehicles.getTotalItemCount }}</p>
+                <p>Prikazano: {{ results_span }} </p>
+            </div>
+            <div class="row mt-3">
+                {% for vehicle in vehicles %}
+                    <div class="col-sm-3 bg-light mb-3">
+                        <div class="one_vehicle">
+                            <div class="image-wrapper-main">
+                                <img src="{{ asset("uploads/covers/")~vehicle.cover.imagePath }}"
+                                     alt="">
+                            </div>
+                            <div class="title-block d-flex justify-content-center align-items-center">
+                                <p class="p-2 m-0 text-center">
+                                    <b>
+                                        {{ vehicle.mark }} {{ vehicle.model }}
+                                    </b>
+                                </p>
+                            </div>
+                            <div class="row text-center">
+                                <div class="col-sm-6">
+                                    <i class="fas fa-car"></i>
+                                    {{ vehicle.manufactureYear|date('Y') }}.
+                                </div>
+                                <div class="col-sm-6">
+                                    <i class="fas fa-road"></i>
+                                    {{ vehicle.kilometers|number_format('0', '.', '.') }} km
+                                </div>
+                            </div>
+                            <p class="p-2 m-0">Status:
+                                {% if vehicle.status == "Dostupno" %}
+                                    <span style="color: darkgoldenrod">
+                                        <b>{{ vehicle.status }}
+                                            <i class="fas fa-check"></i>
+                                        </b>
+                                    </span>
+                                {% else %}
+                                    <span style="color: dodgerblue">
+                                        <b>{{ vehicle.status }}
+                                            <i class="fas fa-route"></i>
+                                        </b>
+                                    </span>
+                                {% endif %}
+                            </p>
+                            <a style="float: right" class="btn btn-success"
+                               href="{{ path("vehicle_details", { id: vehicle.id}) }}">
+                                Prikaži detalje
+                                <i class="fas fa-angle-double-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        <div class="text-center">
+            {{ knp_pagination_render(vehicles) }}
+        </div>
+    </div>
+{% endblock %}
+
+
