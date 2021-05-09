@@ -13,7 +13,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b1973a0-33a1-4a23-8a0f-c4f897df34fe" name="Default Changelist" comment="" />
+    <list default="true" id="3b1973a0-33a1-4a23-8a0f-c4f897df34fe" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminPanelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminPanelController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/InquirieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/InquirieController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SoldVehiclesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SoldVehiclesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UsedVehiclesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UsedVehiclesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/about_us/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about_us/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/car_rental/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/car_rental/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/incoming_vehicles/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/incoming_vehicles/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/inquirie/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_panel/inquirie_list.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/insurance_policies/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/insurance_policies/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ordering_vehicles/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ordering_vehicles/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sold_vehicles/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sold_vehicles/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/used_vehicles/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/used_vehicles/index.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -281,6 +296,7 @@
       <workItem from="1620131754113" duration="18599000" />
       <workItem from="1620305715838" duration="11388000" />
       <workItem from="1620323491405" duration="1530000" />
+      <workItem from="1620546911290" duration="3089000" />
     </task>
     <servers />
   </component>

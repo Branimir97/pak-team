@@ -45,7 +45,7 @@ class InquirieController extends AbstractController
             $this->addFlash('success', 'Uspješno ste poslali upit za '.$vehicle_title.'. Očekujte naš odgovor putem email-a uskoro!');
             return $this->redirectToRoute('vehicle_details', ['id'=> $vehicle->getId()]);
         }
-        return $this->render('inquirie/index.html.twig', [
+        return $this->render('inquirie/inquirie_list.twig', [
             'form' => $form->createView(),
             'vehicle_title' => $vehicle_title
         ]);
@@ -60,7 +60,7 @@ class InquirieController extends AbstractController
     {
         $inquiries = $inquirieRepository->findBy([], ['id'=>'DESC']);
 
-        return $this->render('inquirie/index.html.twig', [
+        return $this->render('inquirie/inquirie_list.twig', [
             'inquiries' => $inquiries,
         ]);
     }

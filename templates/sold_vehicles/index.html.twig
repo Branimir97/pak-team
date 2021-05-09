@@ -2,15 +2,21 @@
 
 {% block title %}Prodana vozila{% endblock %}
 {% block body %}
-    <div class="count text-center">
-        <p class="m-2">Ukupan broj prikazanih prodanih vozila: {{ vehicles.getTotalItemCount }}</p>
-    </div>
-    <div class="row mt-3 justify-content-center">
+    <div class="container-fluid">
+        <h2 class="text-center p-3 bg-light">
+            <b>
+                Prodana vozila
+            </b>
+        </h2>
         {% if vehicles.getTotalItemCount == 0 %}
-            <div class="col-sm-6">
-                <h6 class="text-center bg-secondary text-white p-3">Lista prodanih vozila se ažurira!</h6>
-            </div>
+            <h6 class="text-center mt-3 p-3 bg-info text-white">
+                Lista vozila se ažurira. Posjetite nas kasnije.
+            </h6>
         {% else %}
+        <div class="count text-center">
+            <p class="m-2">Ukupan broj prikazanih prodanih vozila: {{ vehicles.getTotalItemCount }}</p>
+        </div>
+        <div class="row mt-3 justify-content-center">
             {% for vehicle in vehicles %}
                 <div class="col-sm-3 sold_vehicle-wrapper mb-3">
                     <img src="{{ asset('uploads/')~vehicle.imagePath }}"
@@ -19,19 +25,12 @@
                 </div>
             {% endfor %}
         {% endif %}
-    </div>
-    <div class="text-center">
-        {{ knp_pagination_render(vehicles) }}
+        </div>
+        <div class="text-center">
+            {{ knp_pagination_render(vehicles) }}
+        </div>
     </div>
 {% endblock %}
 
-{% block javascripts %}
-    <script>
-        $(document).ready(function () {
-            $('.carousel-item:first-child').addClass('active')
-            $('.carousel-indicators li:first-child').addClass('active')
-        })
-    </script>
-{% endblock %}
 
 

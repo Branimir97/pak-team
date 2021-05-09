@@ -45,7 +45,6 @@ class UsedVehiclesController extends AbstractController
     /**
      * @Route("/vozilo/{id}/detalji", name="vehicle_details")
      * @param Request $request
-     * @param APIService $APIService
      * @param ImageRepository $imageRepository
      * @return Response
      */

@@ -40,7 +40,7 @@ class AdminPanelController extends AbstractController
             return new JsonResponse($vehicles);
         }
         return
-            $this->render('admin_panel/index.html.twig', [
+            $this->render('admin_panel/inquirie_list.twig', [
             'vehicles' => $vehicleRepository->findAllAsArray(),
         ]);
     }

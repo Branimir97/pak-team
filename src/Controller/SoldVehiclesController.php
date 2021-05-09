@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class SoldVehiclesController extends AbstractController
 {
     /**
-     * @Route("/sold/vehicles", name="sold_vehicles")
+     * @Route("/prodana-vozila", name="sold_vehicles")
      * @param Request $request
      * @param SoldVehicleRepository $soldVehicleRepository
      * @param PaginatorInterface $paginator
