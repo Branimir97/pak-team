@@ -112,8 +112,6 @@ class Vehicle
     public function __construct()
     {
         $this->images = new ArrayCollection();
-        $this->favoriteVehicles = new ArrayCollection();
-        $this->additionalEquipment = new ArrayCollection();
         $this->inquiries = new ArrayCollection();
     }
 

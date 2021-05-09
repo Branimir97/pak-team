@@ -14,7 +14,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b1973a0-33a1-4a23-8a0f-c4f897df34fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/public/css/wrappers.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/wrappers.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SoldVehiclesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SoldVehiclesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UsedVehiclesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UsedVehiclesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/InquirieType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/InquirieType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/VehicleType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/VehicleType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/SoldVehicleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/SoldVehicleRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/UploaderHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/UploaderHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/about_us/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about_us/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/insurance_policies/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/insurance_policies/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sold_vehicles/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sold_vehicles/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,7 +292,7 @@
       <workItem from="1620131754113" duration="18599000" />
       <workItem from="1620305715838" duration="11388000" />
       <workItem from="1620323491405" duration="1530000" />
-      <workItem from="1620546911290" duration="3599000" />
+      <workItem from="1620546911290" duration="4634000" />
     </task>
     <servers />
   </component>

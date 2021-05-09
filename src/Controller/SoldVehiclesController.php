@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use App\Repository\SoldVehicleRepository;
-use App\Repository\VehicleRepository;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,13 +16,13 @@ class SoldVehiclesController extends AbstractController
      * @param Request $request
      * @param SoldVehicleRepository $soldVehicleRepository
      * @param PaginatorInterface $paginator
-     * @param VehicleRepository $vehicleRepository
      * @return Response
      */
-    public function index(Request $request, SoldVehicleRepository $soldVehicleRepository,
-                          PaginatorInterface $paginator, VehicleRepository $vehicleRepository): Response
+    public function index(Request $request,
+                          SoldVehicleRepository $soldVehicleRepository,
+                          PaginatorInterface $paginator): Response
     {
-        $soldVehicles = $soldVehicleRepository->findAll();
+        $soldVehicles = $soldVehicleRepository->findBy([], ['id'=>'DESC']);
         $page = $request->query->getInt('page', 1);
         $pagination = $paginator->paginate(
             $soldVehicles,

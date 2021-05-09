@@ -8,7 +8,6 @@ use App\Entity\Vehicle;
 use App\Form\InquirieType;
 use App\Repository\ImageRepository;
 use App\Repository\VehicleRepository;
-use App\Service\APIService;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -24,7 +23,9 @@ class UsedVehiclesController extends AbstractController
      * @param PaginatorInterface $paginator
      * @return Response
      */
-    public function index(Request $request, VehicleRepository $vehicleRepository, PaginatorInterface $paginator): Response
+    public function index(Request $request,
+                          VehicleRepository $vehicleRepository,
+                          PaginatorInterface $paginator): Response
     {
         $vehicles = $vehicleRepository->getQueryBuilder();
         $limit = 12;
@@ -72,7 +73,8 @@ class UsedVehiclesController extends AbstractController
             $entityManager->persist($inquirie);
             $entityManager->flush();
 
-            $this->addFlash('success', 'Uspješno ste poslali upit za vozilo '.$vehicle_title.'. Očekujte naš odgovor uskoro!');
+            $this->addFlash('success', 'Uspješno ste poslali upit za vozilo 
+            '.$vehicle_title.'. Očekujte naš odgovor uskoro!');
             return $this->redirectToRoute('vehicle_details', ['id'=> $vehicle->getId()]);
         }
 

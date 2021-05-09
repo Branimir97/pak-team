@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Service;
 
 use Symfony\Component\HttpFoundation\File\UploadedFile;
@@ -23,7 +22,6 @@ class UploaderHelper
         if(!in_array($uploadedFile->getClientOriginalExtension(), ['jpg', 'jpeg', 'png'])) {
             return null;
         }
-
         $newFileName = $originalFileName .'-'. uniqid() .'.'.$uploadedFile->guessExtension();
         $uploadedFile->move($destination, $newFileName);
         return $newFileName;
@@ -49,7 +47,6 @@ class UploaderHelper
         if(!in_array($uploadedFile->getClientOriginalExtension(), ['jpg', 'jpeg', 'png'])) {
             return null;
         }
-
         $newFileName = $originalFileName.'.'.$uploadedFile->guessExtension();
         $uploadedFile->move($destination, $newFileName);
         return $newFileName;
