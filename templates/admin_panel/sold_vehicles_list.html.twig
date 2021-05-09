@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Prodana vozila{% endblock %}
+
+{% block body %}
+    <h2 class="text-center p-3 bg-light">
+        <b>
+            Prodana vozila
+        </b>
+    </h2>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Naziv slike</th>
+                    <th>Naziv slike s ekstenzijom</th>
+                    <th>Mogućnosti</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for sold_vehicle in sold_vehicles %}
+                <tr>
+                    <td>{{ sold_vehicle.id }}</td>
+                    <td>{{ sold_vehicle.title }}</td>
+                    <td>{{ sold_vehicle.imagePath }}</td>
+                    <td>
+                        {{ include('sold_vehicle/_delete_sold_vehicle_form.html.twig') }}
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="4" class="text-center">Ne postoji niti jedno prodano vozilo u bazi podataka</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

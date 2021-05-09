@@ -10,6 +10,7 @@ use App\Form\InsertSoldVehiclesType;
 use App\Form\VehicleType;
 use App\Repository\CoverRepository;
 use App\Repository\ImageRepository;
+use App\Repository\SoldVehicleRepository;
 use App\Repository\VehicleRepository;
 use App\Service\UploaderHelper;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -40,7 +41,7 @@ class AdminPanelController extends AbstractController
             return new JsonResponse($vehicles);
         }
         return
-            $this->render('admin_panel/index.html.twig', [
+            $this->render('admin_panel/sold_vehicles_list.html.twig', [
             'vehicles' => $vehicleRepository->findAllAsArray(),
         ]);
     }
@@ -144,7 +145,7 @@ class AdminPanelController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="vehicle_delete", methods={"DELETE"})
+     * @Route("/vozilo/{id}/obrisi", name="vehicle_delete", methods={"DELETE"})
      * @param Request $request
      * @param Vehicle $vehicle
      * @param VehicleRepository $vehicleRepository
@@ -174,7 +175,7 @@ class AdminPanelController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/visibility", name="vehicle_change_visibility")
+     * @Route("/{id}/vidljivost", name="vehicle_change_visibility")
      * @param Vehicle $vehicle
      * @return RedirectResponse
      */
@@ -217,10 +218,35 @@ class AdminPanelController extends AbstractController
                 $entityManager->flush();
 
             }
+            $this->addFlash('success', 'Prodana vozila uspješno dodana.');
             return $this->redirectToRoute('vehicle_index');
         }
         return $this->render('admin_panel/new_sold_vehicles.html.twig', [
             'form' => $form->createView(),
         ]);
+    }
+
+    /**
+     * @Route("/prodana-vozila", name="sold_vehicle_index", methods={"GET"})
+     */
+    public function listSoldVehicles(SoldVehicleRepository $soldVehicleRepository): Response
+    {
+        return $this->render('admin_panel/sold_vehicles_list.html.twig', [
+            'sold_vehicles' => $soldVehicleRepository->findAll(),
+        ]);
+    }
+
+    /**
+     * @Route("/prodano-vozilo/{id}/obrisi", name="sold_vehicle_delete", methods={"DELETE"})
+     */
+    public function deleteSoldVehicle(Request $request, SoldVehicle $soldVehicle): Response
+    {
+        if ($this->isCsrfTokenValid('delete'.$soldVehicle->getId(), $request->request->get('_token'))) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->remove($soldVehicle);
+            $entityManager->flush();
+        }
+        $this->addFlash('success', 'Prodano vozilo uspješno je obrisano.');
+        return $this->redirectToRoute('vehicle_index');
     }
 }

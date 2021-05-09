@@ -8,6 +8,7 @@ class UploaderHelper
 {
     private $uploadsPath;
     private $coversPath;
+    private $soldVehiclesPath;
 
     public function __construct(string $uploadsPath, string $coversPath)
     {
@@ -42,7 +43,7 @@ class UploaderHelper
 
     public function uploadSoldVehicleImage(UploadedFile $uploadedFile): ?string
     {
-        $destination = $this->uploadsPath;
+        $destination = $this->soldVehiclesPath;
         $originalFileName = pathinfo($uploadedFile->getClientOriginalName(), PATHINFO_FILENAME);
         if(!in_array($uploadedFile->getClientOriginalExtension(), ['jpg', 'jpeg', 'png'])) {
             return null;

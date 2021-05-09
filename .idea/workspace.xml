@@ -13,7 +13,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b1973a0-33a1-4a23-8a0f-c4f897df34fe" name="Default Changelist" comment="" />
+    <list default="true" id="3b1973a0-33a1-4a23-8a0f-c4f897df34fe" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminPanelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminPanelController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SoldVehiclesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SoldVehiclesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/UploaderHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/UploaderHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin_panel/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_panel/_delete_vehicle_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin_panel/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_panel/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin_panel/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_panel/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -175,6 +185,7 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates/admin_panel" />
+      <recent name="$PROJECT_DIR$/templates/sold_vehicles" />
       <recent name="$PROJECT_DIR$/templates/vehicle" />
     </key>
   </component>
@@ -281,7 +292,7 @@
       <workItem from="1620131754113" duration="18599000" />
       <workItem from="1620305715838" duration="11388000" />
       <workItem from="1620323491405" duration="1530000" />
-      <workItem from="1620546911290" duration="10933000" />
+      <workItem from="1620546911290" duration="13714000" />
     </task>
     <servers />
   </component>
