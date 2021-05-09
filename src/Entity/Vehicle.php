@@ -105,7 +105,7 @@ class Vehicle
     private $cover;
 
     /**
-     * @ORM\OneToMany(targetEntity=Inquirie::class, mappedBy="vehicle")
+     * @ORM\OneToMany(targetEntity=Inquirie::class, mappedBy="vehicle", orphanRemoval=true)
      */
     private $inquiries;
 
