@@ -72,7 +72,6 @@ class VehicleType extends AbstractType
             ->add('gearbox', ChoiceType::class, [
                 'choices' => [
                     'Ručni' => 'Ručni',
-                    'Polu-automatski' => 'Polu-automatski',
                     'Automatski' => 'Automatski'
                 ],
                 'label'=>'Mjenjač'
