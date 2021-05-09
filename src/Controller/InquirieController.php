@@ -5,18 +5,11 @@ namespace App\Controller;
 use App\Entity\Inquirie;
 use App\Entity\Vehicle;
 use App\Form\InquirieType;
-use App\Repository\InquirieRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-/**
- * @Route("/upit")
- * @IsGranted("ROLE_ADMIN")
- */
 class InquirieController extends AbstractController
 {
     /**
@@ -24,7 +17,7 @@ class InquirieController extends AbstractController
      * @param Request $request
      * @return Response
      */
-    public function create(Request $request): Response
+    public function new(Request $request): Response
     {
         $inquirie = new Inquirie();
         $form = $this->createForm(InquirieType::class, $inquirie);
@@ -48,35 +41,5 @@ class InquirieController extends AbstractController
             'form' => $form->createView(),
             'vehicle_title' => $vehicle_title
         ]);
-    }
-
-    /**
-     * @Route("/", name="inquirie_list", methods={"GET"})
-     * @param InquirieRepository $inquirieRepository
-     * @return Response
-     */
-    public function show(InquirieRepository $inquirieRepository): Response
-    {
-        $inquiries = $inquirieRepository->findBy([], ['id'=>'DESC']);
-        return $this->render('admin_panel/inquirie_list.html.twig', [
-            'inquiries' => $inquiries,
-        ]);
-    }
-
-    /**
-     * @Route("/{id}/obrisi", name="inquirie_delete")
-     * @param Request $request
-     * @return RedirectResponse
-     */
-    public function deleteInquirie(Request $request): RedirectResponse
-    {
-        $inquirie_id = $request->get('id');
-        $inquirie = $this->getDoctrine()->getRepository(Inquirie::class)->find($inquirie_id);
-        $entityManager = $this->getDoctrine()->getManager();
-        $entityManager->remove($inquirie);
-        $entityManager->flush();
-
-        $this->addFlash('success', "Upit uspješno obrisan!");
-        return $this->redirectToRoute('inquirie_list');
     }
 }

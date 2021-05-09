@@ -14,15 +14,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b1973a0-33a1-4a23-8a0f-c4f897df34fe" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AdminPanelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminPanelController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SoldVehiclesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SoldVehiclesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/InquirieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/InquirieController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service/UploaderHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/UploaderHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin_panel/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_panel/_delete_vehicle_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin_panel/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_panel/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin_panel/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_panel/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin_panel/inquirie_list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_panel/inquirie_list.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin_panel/sold_vehicles_list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_panel/sold_vehicles_list.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sold_vehicles/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sold_vehicles/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +166,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Repository" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/admin_panel" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -179,6 +179,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/admin_panel" />
       <recent name="$PROJECT_DIR$/src/Repository" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/templates/home" />
@@ -292,7 +293,7 @@
       <workItem from="1620131754113" duration="18599000" />
       <workItem from="1620305715838" duration="11388000" />
       <workItem from="1620323491405" duration="1530000" />
-      <workItem from="1620546911290" duration="13714000" />
+      <workItem from="1620546911290" duration="15642000" />
     </task>
     <servers />
   </component>

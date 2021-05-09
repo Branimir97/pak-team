@@ -31,13 +31,27 @@
                 <th>Status</th>
                 <td>
                     {% if vehicle.status == "Dostupno" %}
-                        <span style="color: darkgoldenrod"><b>{{ vehicle.status }} <i class="fas fa-check"></i></b></span>
+                        <span style="color: darkgoldenrod">
+                            <b>{{ vehicle.status }}
+                                <i class="fas fa-check"></i>
+                            </b>
+                        </span>
                     {% elseif vehicle.status == "U dolasku" %}
-                        <span style="color: dodgerblue"><b>{{ vehicle.status }} <i class="fas fa-route"></i></b></span>
+                        <span style="color: dodgerblue">
+                            <b>{{ vehicle.status }}
+                                <i class="fas fa-route"></i>
+                            </b>
+                        </span>
                     {% elseif vehicle.status == "Rezervirano" %}
-                        <span style="color: red"><b>{{ vehicle.status }} <i class="fas fa-hourglass-half"></i></b></span>
+                        <span style="color: red"><b>{{ vehicle.status }}
+                                <i class="fas fa-hourglass-half"></i>
+                            </b>
+                        </span>
                     {% elseif vehicle.status == "Prodano" %}
-                        <span style="color: green"><b>{{ vehicle.status }} <i class="fas fa-hand-holding-usd"></i></b></span>
+                        <span style="color: green"><b>{{ vehicle.status }}
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </b>
+                        </span>
                     {% endif %}
                 </td>
             </tr>
@@ -92,6 +106,6 @@
            href="{{ path('vehicle_edit', {'id': vehicle.id}) }}">
             Uredi vozilo</a>
         </div>
-        {{ include('admin_panel/_delete_sold_vehicles_form.html.twig') }}
+        {{ include('admin_panel/_delete_vehicle_form.html.twig') }}
     </div>
 {% endblock %}

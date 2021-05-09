@@ -10,10 +10,11 @@ class UploaderHelper
     private $coversPath;
     private $soldVehiclesPath;
 
-    public function __construct(string $uploadsPath, string $coversPath)
+    public function __construct(string $uploadsPath, string $coversPath, string $soldVehiclesPath)
     {
         $this->uploadsPath = $uploadsPath;
         $this->coversPath = $coversPath;
+        $this->soldVehiclesPath = $soldVehiclesPath;
     }
 
     public function uploadVehicleImage(UploadedFile $uploadedFile): ?string

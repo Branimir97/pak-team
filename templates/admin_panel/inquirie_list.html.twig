@@ -49,8 +49,7 @@
                 <div class="text-center">
                     <a class="btn btn-success"
                        href="mailto:{{ inquirie.email }}">Pošalji email klijentu</a>
-                    <a class="btn btn-danger"
-                       href="{{ path('inquirie_delete', {id:inquirie.id}) }}">Obriši upit</a>
+                    {{ include('admin_panel/_delete_inquirie_form.html.twig') }}
                 </div>
                 <hr>
             </div>

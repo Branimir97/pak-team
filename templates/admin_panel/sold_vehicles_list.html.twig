@@ -25,12 +25,14 @@
                     <td>{{ sold_vehicle.title }}</td>
                     <td>{{ sold_vehicle.imagePath }}</td>
                     <td>
-                        {{ include('sold_vehicle/_delete_sold_vehicle_form.html.twig') }}
+                        {{ include('admin_panel/_delete_sold_vehicle_form.html.twig') }}
                     </td>
                 </tr>
             {% else %}
                 <tr>
-                    <td colspan="4" class="text-center">Ne postoji niti jedno prodano vozilo u bazi podataka</td>
+                    <td colspan="4" class="text-center">
+                        Ne postoji niti jedno prodano vozilo u bazi podataka
+                    </td>
                 </tr>
             {% endfor %}
             </tbody>
