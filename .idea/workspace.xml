@@ -13,17 +13,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b1973a0-33a1-4a23-8a0f-c4f897df34fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdminPanelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminPanelController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/InquirieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/InquirieController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/UploaderHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/UploaderHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin_panel/inquirie_list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_panel/inquirie_list.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin_panel/sold_vehicles_list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_panel/sold_vehicles_list.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/sold_vehicles/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sold_vehicles/index.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="3b1973a0-33a1-4a23-8a0f-c4f897df34fe" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -293,7 +283,7 @@
       <workItem from="1620131754113" duration="18599000" />
       <workItem from="1620305715838" duration="11388000" />
       <workItem from="1620323491405" duration="1530000" />
-      <workItem from="1620546911290" duration="15642000" />
+      <workItem from="1620546911290" duration="16091000" />
     </task>
     <servers />
   </component>
