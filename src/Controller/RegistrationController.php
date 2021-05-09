@@ -22,7 +22,10 @@ class RegistrationController extends AbstractController
      * @param AppAuthenticator $authenticator
      * @return Response
      */
-    public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder, GuardAuthenticatorHandler $guardHandler, AppAuthenticator $authenticator): Response
+    public function register(Request $request,
+                             UserPasswordEncoderInterface $passwordEncoder,
+                             GuardAuthenticatorHandler $guardHandler,
+                             AppAuthenticator $authenticator): Response
     {
         if ($this->getUser()) {
             return $this->redirectToRoute('used_vehicles');

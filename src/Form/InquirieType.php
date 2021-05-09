@@ -51,9 +51,8 @@ class InquirieType extends AbstractType
             ->add('content', TextareaType::class, [
                 'label'=>'Sadržaj',
                 'attr'=>[
-                    'placeholder'=>'npr. Što Vas još zanima o vozilu, načini plaćanja, 
-                                    kupovina vozila, dogovor oko preuzimanja vozila itd.'
-                ]
+                    'placeholder'=>'npr. Što Vas još zanima o vozilu, načini plaćanja, kupovina vozila, dogovor oko preuzimanja vozila itd.'
+                ],
             ])
             ->add('submit', SubmitType::class, [
                 'label' => 'Pošalji upit'

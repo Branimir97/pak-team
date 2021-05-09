@@ -91,9 +91,10 @@ class VehicleType extends AbstractType
             ])
             ->add('description', TextareaType::class, [
                 'label'=>'Opis vozila',
-                'attr'=>['rows'=>10, 'placeholder'=>'
-                                        npr. Automobil bez ulaganja. Grijanje sjedala, šiber, 
-                                        panorama, full LED paket, ...'],
+                'attr'=>[
+                    'rows'=>10,
+                    'placeholder'=>'npr. Automobil bez ulaganja. Grijanje sjedala, šiber, panorama, full LED paket, ...'
+                ],
             ])
             ->add('price', NumberType::class, [
                 'label'=>'Cijena [€]',

@@ -1,16 +1,21 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Dodavanje novog vozila{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset("css/container50.css") }}">
+{% endblock %}
 
 {% block body %}
-    <h1 class="p-3 text-center">
-        <b>
-            <span class="bg-light p-1" style="font-family: 'Big Shoulders Stencil Display', cursive;">Dodavanje novog vozila</span>
-        </b>
-    </h1>
-
-    <div class="mt-3 mb-3 container">
-        <a class="p-3" href="{{ path('vehicle_index') }}"><i class="fas fa-arrow-circle-left"></i> Nazad na listu vozila</a>
+    <div class="container">
+        <h2 class="text-center p-3 bg-light">
+            <b>
+                Dodavanje novog vozila
+            </b>
+        </h2>
+        <a class="p-3" href="{{ path('vehicle_index') }}">
+            <i class="fas fa-arrow-circle-left"></i>
+            Pregled vozila
+        </a>
         <div class="mt-2">
             {{ include('admin_panel/_form.html.twig') }}
         </div>

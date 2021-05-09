@@ -1,23 +1,33 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Uređivanje vozila{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset("css/container50.css") }}">
+{% endblock %}
 
 {% block body %}
-
-    <h1 class="p-3 text-center">
-        <b>
-            <span class="bg-light p-1" style="font-family: 'Big Shoulders Stencil Display', cursive;">Uređivanje vozila</span>
-        </b>
-    </h1>
-
-    <p class="text-center"><span class="bg-light p-1" style="color: darkcyan">Vozilo: <b>{{ vehicle.mark }} {{ vehicle.model }}</b></span></p>
-
-
-    <div class="mt-3 mb-3 container">
-        <a class="p-3" href="{{ path('vehicle_index') }}"><i class="fas fa-arrow-circle-left"></i> Nazad na listu vozila</a>
-
+    <div class="container">
+        <h2 class="text-center p-3 bg-light">
+            <b>
+                Uređivanje vozila
+            </b>
+        </h2>
+        <p class="text-center">
+            <span class="bg-light p-1" style="color: darkcyan">
+                Vozilo:
+                <b>
+                    {{ vehicle.mark }} {{ vehicle.model }}
+                </b>
+            </span>
+        </p>
+        <a class="p-3" href="{{ path('vehicle_index') }}">
+            <i class="fas fa-arrow-circle-left"></i>
+            Pregled vozila
+        </a>
         <div class="mt-2">
             {{ include('admin_panel/_form.html.twig', {'button_label': 'Spremi promjene'}) }}
+        </div>
+        <div class="text-center">
             {{ include('admin_panel/_delete_form.html.twig') }}
         </div>
     </div>
