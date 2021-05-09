@@ -54,9 +54,6 @@ class InquirieType extends AbstractType
                     'placeholder'=>'npr. Što Vas još zanima o vozilu, načini plaćanja, kupovina vozila, dogovor oko preuzimanja vozila itd.'
                 ],
             ])
-            ->add('submit', SubmitType::class, [
-                'label' => 'Pošalji upit'
-            ])
         ;
     }
 

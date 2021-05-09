@@ -14,14 +14,13 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/inquirie")
+ * @Route("/upit")
  * @IsGranted("ROLE_ADMIN")
  */
 class InquirieController extends AbstractController
 {
-
     /**
-     * @Route("/{id}/create", name="inquirie_create", methods={"GET", "POST"})
+     * @Route("/{id}/stvori", name="inquirie_create", methods={"GET", "POST"})
      * @param Request $request
      * @return Response
      */
@@ -45,7 +44,7 @@ class InquirieController extends AbstractController
             $this->addFlash('success', 'Uspješno ste poslali upit za '.$vehicle_title.'. Očekujte naš odgovor putem email-a uskoro!');
             return $this->redirectToRoute('vehicle_details', ['id'=> $vehicle->getId()]);
         }
-        return $this->render('inquirie/inquirie_list.twig', [
+        return $this->render('admin_panel/inquirie_list.html.twig', [
             'form' => $form->createView(),
             'vehicle_title' => $vehicle_title
         ]);
@@ -59,18 +58,17 @@ class InquirieController extends AbstractController
     public function show(InquirieRepository $inquirieRepository): Response
     {
         $inquiries = $inquirieRepository->findBy([], ['id'=>'DESC']);
-
-        return $this->render('inquirie/inquirie_list.twig', [
+        return $this->render('admin_panel/inquirie_list.html.twig', [
             'inquiries' => $inquiries,
         ]);
     }
 
     /**
-     * @Route("/{id}/delete", name="inquirie_delete")
+     * @Route("/{id}/obrisi", name="inquirie_delete")
      * @param Request $request
      * @return RedirectResponse
      */
-    public function deleteInquirie(Request $request)
+    public function deleteInquirie(Request $request): RedirectResponse
     {
         $inquirie_id = $request->get('id');
         $inquirie = $this->getDoctrine()->getRepository(Inquirie::class)->find($inquirie_id);
@@ -78,7 +76,7 @@ class InquirieController extends AbstractController
         $entityManager->remove($inquirie);
         $entityManager->flush();
 
-        $this->addFlash('success', "Upit uspješno izbrisan!");
+        $this->addFlash('success', "Upit uspješno obrisan!");
         return $this->redirectToRoute('inquirie_list');
     }
 }

@@ -1,20 +1,27 @@
 {{ form_start(form) }}
-            {{ form_row(form.vehicle, {'value':vehicle.model}) }}
 <div class="row">
+    <div class="col-sm-12">
+        {{ form_row(form.vehicle, {'value':vehicle.model}) }}
+    </div>
     <div class="col-sm-6">
         {{ form_row(form.firstName) }}
     </div>
     <div class="col-sm-6">
         {{ form_row(form.lastName) }}
     </div>
-</div>
-<div class="row">
     <div class="col-sm-6">
         {{ form_row(form.email) }}
     </div>
     <div class="col-sm-6">
         {{ form_row(form.contactNumber) }}
     </div>
+    <div class="col-sm-12">
+        {{ form_row(form.content) }}
+    </div>
 </div>
-{{ form_row(form.content) }}
-            {{ form_end(form) }}
+<div class="text-center">
+    <button class="btn btn-primary">
+        {{ button_label|default('Pošalji upit') }}
+    </button>
+</div>
+{{ form_end(form) }}

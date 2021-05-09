@@ -6,27 +6,23 @@
 {% endblock %}
 
 {% block body %}
+    <h2 class="text-center p-3 bg-light">
+        <b style="color: darkred">
+            {{ vehicle.mark }} {{ vehicle.model }}
+        </b>
+    </h2>
+    <hr>
     <div class="container-fluid">
-        <p class="text-center mb-0">
-            <span class="bg-light p-1" style="color: darkcyan">
-                Vozilo
-                <b>
-                    {{ vehicle.mark }} {{ vehicle.model }}
-                </b>
-            </span>
-            <span>
-                Novo dodano za test
-            </span>
-        </p>
-        <h1 class="p-3 text-center">
+        <h2 class="p-3 text-center">
             <b>
                 <span class="bg-light p-1">
                     Fotografije vozila
                 </span>
             </b>
-        </h1>
+        </h2>
         <div class="container gallery">
-            <div id="carouselExampleIndicators" class="carousel slide vehicle-details" data-ride="carousel">
+            <div id="carouselExampleIndicators"
+                 class="carousel slide vehicle-details" data-ride="carousel">
                 <ol class="carousel-indicators">
                     {% for i in 1..imagesNumber+1 %}
                         <li data-target="#carouselExampleIndicators" data-slide-to="{{ i }}"></li>
@@ -44,18 +40,29 @@
                         </div>
                     {% endfor %}
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <a class="carousel-control-prev"
+                   href="#carouselExampleIndicators"
+                   role="button"
+                   data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Prethodna</span>
                 </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <a class="carousel-control-next"
+                   href="#carouselExampleIndicators"
+                   role="button"
+                   data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Sljedeća</span>
                 </a>
             </div>
         </div>
 
-        <p class="text-center mt-3"><span class="bg-light p-2"><b>Zainteresiran si za ovo vozilo?</b></span>
+        <p class="text-center mt-3">
+            <span class="bg-light p-2">
+                <b>
+                    Zainteresiran si za ovo vozilo?
+                </b>
+            </span>
         <p class="text-center">
             <span class="bg-light p-2">
                 <b>
@@ -137,15 +144,18 @@
                 </p>
             </div>
             <div class="col-sm-3">
-                <p class="bg-light p-3">Mjenjač: <strong>{{ vehicle.gearbox }}</strong>
+                <p class="bg-light p-3">Mjenjač:
+                    <strong>{{ vehicle.gearbox }}</strong>
                 </p>
             </div>
             <div class="col-sm-3">
-                <p class="bg-light p-3">Broj brzina: <strong>{{ vehicle.gears }}</strong>
+                <p class="bg-light p-3">Broj brzina:
+                    <strong>{{ vehicle.gears }}</strong>
                 </p>
             </div>
             <div class="col-sm-3">
-                <p class="bg-light p-3">Potrošnja: <strong>{{ vehicle.consumption }} L/100km</strong>
+                <p class="bg-light p-3">Potrošnja:
+                    <strong>{{ vehicle.consumption }} L/100km</strong>
                 </p>
             </div>
         </div>
@@ -169,19 +179,19 @@
                 <strong>* Napomena</strong>
             </p>
             <i>
-                PAK TEAM d.o.o. ulaže maksimalne razumne napore kako bi podaci i opisi vozila bili što precizniji.<br>
-                Ne odgovaramo za eventualne pogreške ili propuste, a ukoliko do istih dođe, bit će
-                ispravljeni u najkraćem mogućem roku.
+                PAK TEAM d.o.o. ulaže maksimalne razumne napore kako bi podaci i
+                opisi vozila bili što precizniji.<br>
+                Ne odgovaramo za eventualne pogreške ili propuste, a ukoliko do istih dođe,
+                bit će ispravljeni u najkraćem mogućem roku.
             </i>
         </div>
-
-        <h1 class="p-3 text-center" id="upit">
+        <h2 class="text-center p-2 bg-light mt-2" id="upit">
             <b>
-                <span class="bg-light p-1">Novi upit</span>
+                Novi upit
             </b>
-        </h1>
+        </h2>
         <div class="container">
-
+            {{ include('vehicle/_form_inquirie.html.twig') }}
         </div>
     </div>
 {% endblock %}

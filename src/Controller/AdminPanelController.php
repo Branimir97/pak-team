@@ -98,6 +98,7 @@ class AdminPanelController extends AbstractController
             $entityManager->persist($vehicle);
             $entityManager->flush();
 
+            $this->addFlash('success', 'Novo vozilo uspješno dodano.');
             return $this->redirectToRoute('vehicle_index');
         }
         return $this->render('admin_panel/new_vehicle.html.twig', [
@@ -131,6 +132,8 @@ class AdminPanelController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
+
+            $this->addFlash('success', 'Podaci o vozilu uspješno su ažurirani.');
             return $this->redirectToRoute('vehicle_index');
         }
 
