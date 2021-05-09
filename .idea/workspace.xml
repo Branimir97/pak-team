@@ -14,11 +14,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b1973a0-33a1-4a23-8a0f-c4f897df34fe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149368898-6097bbd5202cc.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149368899-6097bbd520cc7.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149368902-6097bbd520ecc.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149368903-6097bbd521085.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149368904-6097bbd5212bc.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149368905-6097bbd52149c.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149368906-6097bbd52190b.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149368912-6097bbd52253a.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149369269-6097bbd52292c.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149369270-6097bbd522cc7.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149369287-6097bbd52304b.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149369584-6097bbd52337a.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149369659-6097bbd523642.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149369762-6097bbd523b1c.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149369783-6097bbd523d40.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149369785-6097bbd524360.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/covers/bmw-serija-5-touring-530xd-slika-149368911-6097bbd5246b9.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin_panel/inquirie_list.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AdminPanelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminPanelController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/InquirieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/InquirieController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/InquirieType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/InquirieType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin_panel/inquirie_list.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_panel/inquirie_list.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin_panel/inquirie_list.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/vehicle/_form_inquirie.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/vehicle/_form_inquirie.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/vehicle/details.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/vehicle/details.html.twig" afterDir="false" />
@@ -290,7 +309,7 @@
       <workItem from="1620131754113" duration="18599000" />
       <workItem from="1620305715838" duration="11388000" />
       <workItem from="1620323491405" duration="1530000" />
-      <workItem from="1620546911290" duration="8991000" />
+      <workItem from="1620546911290" duration="9298000" />
     </task>
     <servers />
   </component>
