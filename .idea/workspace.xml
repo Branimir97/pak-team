@@ -14,28 +14,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b1973a0-33a1-4a23-8a0f-c4f897df34fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149368898-6097bbd5202cc.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149368899-6097bbd520cc7.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149368902-6097bbd520ecc.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149368903-6097bbd521085.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149368904-6097bbd5212bc.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149368905-6097bbd52149c.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149368906-6097bbd52190b.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149368912-6097bbd52253a.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149369269-6097bbd52292c.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149369270-6097bbd522cc7.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149369287-6097bbd52304b.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149369287-6097bdd755935.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149369584-6097bbd52337a.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149369659-6097bbd523642.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149369762-6097bbd523b1c.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149369783-6097bbd523d40.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/bmw-serija-5-touring-530xd-slika-149369785-6097bbd524360.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/covers/bmw-serija-5-touring-530xd-slika-149368911-6097bbd5246b9.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/covers/bmw-serija-5-touring-530xd-slika-149369269-6097bdd7561f7.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/covers/vw-golf-vi-match-1-6-tdi-191334-6094205e5b13d.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/golf-vi-united-grey-12-25597-6094205e58fc7.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Vehicle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Vehicle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -304,7 +283,7 @@
       <workItem from="1620131754113" duration="18599000" />
       <workItem from="1620305715838" duration="11388000" />
       <workItem from="1620323491405" duration="1530000" />
-      <workItem from="1620546911290" duration="9928000" />
+      <workItem from="1620546911290" duration="10625000" />
     </task>
     <servers />
   </component>
