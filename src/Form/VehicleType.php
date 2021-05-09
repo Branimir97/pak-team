@@ -49,8 +49,6 @@ class VehicleType extends AbstractType
                     'Diesel' => 'Diesel ',
                     'Benzin' => 'Benzin',
                     'Električni' => 'Električni',
-                    'Hybrid' => 'Hybrid',
-                    'Plug-In Hybrid' => 'Plug-In Hybrid',
                 ]
             ])
             ->add('manufactureYear', DateType::class, [
@@ -72,7 +70,6 @@ class VehicleType extends AbstractType
             ->add('gearbox', ChoiceType::class, [
                 'choices' => [
                     'Ručni' => 'Ručni',
-                    'Polu-automatski' => 'Polu-automatski',
                     'Automatski' => 'Automatski'
                 ],
                 'label'=>'Mjenjač'
@@ -91,7 +88,10 @@ class VehicleType extends AbstractType
             ])
             ->add('description', TextareaType::class, [
                 'label'=>'Opis vozila',
-                'attr'=>['rows'=>10, 'placeholder'=>'npr. Automobil bez ulaganja. Grijanje sjedala, šiber, panorama, full LED paket, ...'],
+                'attr'=>[
+                    'rows'=>10,
+                    'placeholder'=>'npr. Automobil bez ulaganja. Grijanje sjedala, šiber, panorama, full LED paket, ...'
+                ],
             ])
             ->add('price', NumberType::class, [
                 'label'=>'Cijena [€]',

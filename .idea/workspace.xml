@@ -156,7 +156,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/admin_panel" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -169,12 +169,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/admin_panel" />
       <recent name="$PROJECT_DIR$/src/Repository" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/templates/home" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates/admin_panel" />
+      <recent name="$PROJECT_DIR$/templates/sold_vehicles" />
       <recent name="$PROJECT_DIR$/templates/vehicle" />
     </key>
   </component>
@@ -280,7 +282,8 @@
       <workItem from="1620131659370" duration="65000" />
       <workItem from="1620131754113" duration="18599000" />
       <workItem from="1620305715838" duration="11388000" />
-      <workItem from="1620323491405" duration="1080000" />
+      <workItem from="1620323491405" duration="1530000" />
+      <workItem from="1620546911290" duration="16091000" />
     </task>
     <servers />
   </component>

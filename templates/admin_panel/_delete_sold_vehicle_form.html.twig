@@ -1,0 +1,7 @@
+<form method="post" action="{{ path('sold_vehicle_delete',
+    {'id': sold_vehicle.id}) }}"
+      onsubmit="return confirm('Jeste li sigurni da želite obrisati ovo prodano vozilo?');">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ sold_vehicle.id) }}">
+    <button class="btn btn-danger" title="Obriši prodano vozilo">Obriši</button>
+</form>

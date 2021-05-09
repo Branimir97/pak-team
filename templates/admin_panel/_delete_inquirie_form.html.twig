@@ -1,0 +1,9 @@
+<form method="post" action="{{ path('inquirie_delete',
+    {'id': inquirie.id}) }}"
+      onsubmit="return confirm('Jeste li sigurni da želite obrisati ovaj upit?');">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ inquirie.id) }}">
+    <div class="mt-2">
+        <button class="btn btn-danger" title="Obriši prodano vozilo">Obriši upit</button>
+    </div>
+</form>

@@ -7,14 +7,15 @@
 
 {% block body %}
     <div class="used-vehicles-wrapper"></div>
-    <div class="container-fluid">
-        <h1 class="text-center p-3">
+    <h2 class="text-center p-3 bg-light">
+        <b>
             Rabljena vozila u ponudi
-        </h1>
-
+        </b>
+    </h2>
+    <div class="container-fluid">
       {% if vehicles.getTotalItemCount == 0 %}
-            <h6 class="text-center mt-3 p-3 bg-danger text-white">
-                Trenutno nemamo niti jedno vozilo u ponudi.
+            <h6 class="text-center mt-3 p-3 bg-info text-white">
+                Lista vozila se ažurira. Posjetite nas kasnije.
             </h6>
             <h6 class="text-center bg-light p-3">
                 Ukoliko ste zainteresirani za određeni model vozila, informacije o narudžbi saznajte na
