@@ -49,8 +49,6 @@ class VehicleType extends AbstractType
                     'Diesel' => 'Diesel ',
                     'Benzin' => 'Benzin',
                     'Električni' => 'Električni',
-                    'Hybrid' => 'Hybrid',
-                    'Plug-In Hybrid' => 'Plug-In Hybrid',
                 ]
             ])
             ->add('manufactureYear', DateType::class, [
