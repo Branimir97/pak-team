@@ -1,6 +1,10 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Prodana vozila{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset("css/sold_vehicles.css") }}">
+{% endblock %}
+
 {% block body %}
     <div class="sold-vehicles-wrapper"></div>
     <div class="container-fluid">

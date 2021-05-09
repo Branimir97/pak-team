@@ -1,12 +1,3 @@
-.oops-wrapper {
-    height: 200px;
-}
-
-.oops-wrapper img {
-    width: 100%;
-    height: 100%;
-}
-
 .sold_vehicle-wrapper {
     width: 100%;
     height: 200px;
@@ -18,12 +9,8 @@
     object-fit: cover;
 }
 
-
 /* Mobile L */
 @media screen and (min-width: 425px) {
-    .oops-wrapper {
-        height: 250px;
-    }
     .sold_vehicle-wrapper {
         height: 275px;
     }
@@ -38,9 +25,6 @@
 
 /* Laptop */
 @media screen and (min-width: 1024px) {
-    .oops-wrapper {
-        height: 325px;
-    }
     .sold_vehicle-wrapper {
         height: 225px;
     }
@@ -48,9 +32,6 @@
 
 /* Laptop L */
 @media screen and (min-width: 1440px) {
-    .oops-wrapper {
-        height: 400px;
-    }
     .sold_vehicle-wrapper {
         height: 250px;
     }
