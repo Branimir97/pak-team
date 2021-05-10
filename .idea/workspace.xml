@@ -15,6 +15,18 @@
   <component name="ChangeListManager">
     <list default="true" id="3b1973a0-33a1-4a23-8a0f-c4f897df34fe" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201019121835.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20201019121835.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201020070420.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201020085049.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20201020085049.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201020095452.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201022060422.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20201022060422.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201023075244.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201023080229.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201023132704.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201126151811.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20201126151811.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201128230831.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201203161115.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20201203161115.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201203174556.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20201203174556.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,8 +136,6 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
       <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
-      <path value="$PROJECT_DIR$/vendor/ocramius/proxy-manager" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/reflection" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
       <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
       <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
@@ -138,7 +148,6 @@
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-code" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-zendframework-bridge" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-eventmanager" />
-      <path value="$PROJECT_DIR$/vendor/webimpress/safe-writer" />
       <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/vendor/symfony/apache-pack" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
@@ -146,6 +155,11 @@
       <path value="$PROJECT_DIR$/vendor/twig/intl-extra" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/friendsofphp/proxy-manager-lts" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/vendor/ocramius/proxy-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/reflection" />
+      <path value="$PROJECT_DIR$/vendor/webimpress/safe-writer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1j5MnRBgHXfIQwvor4bCs1R6XdC" />
@@ -158,7 +172,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/admin_panel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -171,9 +185,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/templates/admin_panel" />
       <recent name="$PROJECT_DIR$/src/Repository" />
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/templates/home" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -287,6 +301,7 @@
       <workItem from="1620323491405" duration="1530000" />
       <workItem from="1620546911290" duration="16435000" />
       <workItem from="1620637410842" duration="834000" />
+      <workItem from="1620640884988" duration="1036000" />
     </task>
     <servers />
   </component>

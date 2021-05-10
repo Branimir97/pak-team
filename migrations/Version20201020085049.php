@@ -20,12 +20,12 @@ final class Version20201020085049 extends AbstractMigration
     public function up(Schema $schema) : void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE admin_panel ADD visibility TINYINT(1) NOT NULL');
+        $this->addSql('ALTER TABLE vehicle ADD visibility TINYINT(1) DEFAULT \'1\' NOT NULL');
     }
 
     public function down(Schema $schema) : void
     {
         // this down() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE admin_panel DROP visibility');
+        $this->addSql('ALTER TABLE vehicle DROP visibility');
     }
 }

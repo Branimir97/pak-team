@@ -21,7 +21,7 @@ final class Version20201203161115 extends AbstractMigration
     {
         // this up() migration is auto-generated, please modify it to your needs
         $this->addSql('CREATE TABLE cover (id INT AUTO_INCREMENT NOT NULL, vehicle_id INT DEFAULT NULL, image_path VARCHAR(255) NOT NULL, UNIQUE INDEX UNIQ_8D0886C5545317D1 (vehicle_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
-        $this->addSql('ALTER TABLE cover ADD CONSTRAINT FK_8D0886C5545317D1 FOREIGN KEY (vehicle_id) REFERENCES admin_panel (id)');
+        $this->addSql('ALTER TABLE cover ADD CONSTRAINT FK_8D0886C5545317D1 FOREIGN KEY (vehicle_id) REFERENCES vehicle (id)');
     }
 
     public function down(Schema $schema) : void
