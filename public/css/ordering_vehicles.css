@@ -9,3 +9,14 @@
         width: 50%;
     }
 }
+
+/* Laptop L */
+@media screen and (min-width: 1440px) {
+    .container-fluid{
+        width: 80%!important;
+    }
+    .ordering-vehicle-image img {
+        height: 330px;
+        width: 80%;
+    }
+}

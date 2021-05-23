@@ -9,3 +9,10 @@
         height: 400px;
     }
 }
+
+/* Laptop L */
+@media screen and (min-width: 1440px) {
+    .container-fluid{
+        width: 80%!important;
+    }
+}
