@@ -13,13 +13,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b1973a0-33a1-4a23-8a0f-c4f897df34fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/car_rental.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/car_rental.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/insurance_policies.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/insurance_policies.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/ordering_vehicles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/ordering_vehicles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="3b1973a0-33a1-4a23-8a0f-c4f897df34fe" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -303,7 +297,7 @@
       <workItem from="1621086189753" duration="616000" />
       <workItem from="1621104394105" duration="624000" />
       <workItem from="1621179318494" duration="32000" />
-      <workItem from="1621796755740" duration="1816000" />
+      <workItem from="1621796755740" duration="2342000" />
     </task>
     <servers />
   </component>
